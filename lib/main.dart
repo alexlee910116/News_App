@@ -1,5 +1,4 @@
 import 'package:alex_news/components/customListTile.dart';
-import 'package:alex_news/components/searchListTile.dart';
 import 'package:alex_news/model/article_model.dart';
 import 'package:alex_news/pages/search_page.dart';
 import 'package:alex_news/services/api_service.dart';
