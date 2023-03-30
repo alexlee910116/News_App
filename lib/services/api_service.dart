@@ -28,7 +28,7 @@ class ApiService {
 
   Future<List<Article>> searchArticle(String keyword) async {
   final url = Uri.parse(
-      'https://newsapi.org/v2/everything?q=$keyword&sortBy=popularity&apiKey=4590aab7121447c3a85bc7757cc4586a');
+      'https://newsapi.org/v2/everything?q=$keyword&apiKey=4590aab7121447c3a85bc7757cc4586a');
 
   final res = await http.get(url);
 
