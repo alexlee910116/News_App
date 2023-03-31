@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.lime,
+      ),
       home: HomePage(),
     );
   }
@@ -54,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
       ),
       body: FutureBuilder<List<Article>>(
         future: client.getArticle(),
@@ -73,8 +76,8 @@ class _HomePageState extends State<HomePage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        // backgroundColor: Colors.white,
+        // foregroundColor: Colors.black,
         onPressed: () {
           Navigator.push(
             context,

@@ -33,17 +33,19 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         title: TextField(
           controller: _searchController,
           decoration: InputDecoration(
             hintText: 'Search',
+            hintStyle: TextStyle(fontSize: 16.0,
+            fontWeight: FontWeight.bold)
           ),
         ),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.search),
-            color: Colors.black,
+            // color: Colors.black,
             onPressed: () async {
               var keyword = _searchController.text;
               if (keyword.isNotEmpty) {
@@ -124,7 +126,13 @@ class _SearchPageState extends State<SearchPage> {
                 },
               )
             : Center(
-                child: Text('Typing the key word'),
+                child: Text(
+                  'Typing the key word',
+                  style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                            ),
+                  ),
               ),
       ),
     );
